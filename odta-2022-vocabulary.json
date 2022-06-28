@@ -5,6 +5,7 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     "odta": "https://example-vocab.ex/",
+    "goodrelations": "http://purl.org/goodrelations/v1",
     "rdfs:subClassOf": {
       "@id": "rdfs:subClassOf",
       "@type": "@id"
@@ -295,11 +296,39 @@
       "rdfs:subClassOf": "schema:Enumeration"
     },
     {
+      "@id": "odta:CaveOrMineEnumerationPlaceholder",
+      "@type": "odta:CaveOrMineEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
+    },
+    {
       "@id": "odta:CongressCenterEnumeration",
       "@type": "rdfs:Class",
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
       "rdfs:label": "CongressCenterEnumeration",
       "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:CongressCenterEnumerationPlaceholder",
+      "@type": "odta:CongressCenterEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
     },
     {
       "@id": "odta:NatureAttractionEnumeration",
@@ -309,11 +338,39 @@
       "rdfs:subClassOf": "schema:Enumeration"
     },
     {
+      "@id": "odta:NatureAttractionEnumerationPlaceholder",
+      "@type": "odta:NatureAttractionEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
+    },
+    {
       "@id": "odta:EventVenueEnumeration",
       "@type": "rdfs:Class",
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
       "rdfs:label": "EventVenueEnumeration",
       "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:EventVenueEnumerationPlaceholder",
+      "@type": "odta:EventVenueEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
     },
     {
       "@id": "odta:SaunaEnumeration",
@@ -323,11 +380,39 @@
       "rdfs:subClassOf": "schema:Enumeration"
     },
     {
+      "@id": "odta:SaunaEnumerationPlaceholder",
+      "@type": "odta:SaunaEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
+    },
+    {
       "@id": "odta:SportsActivityLocationEnumeration",
       "@type": "rdfs:Class",
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
       "rdfs:label": "SportsActivityLocationEnumeration",
       "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:SportsActivityLocationEnumerationPlaceholder",
+      "@type": "odta:SportsActivityLocationEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
     },
     {
       "@id": "odta:ZooEnumeration",
@@ -337,6 +422,20 @@
       "rdfs:subClassOf": "schema:Enumeration"
     },
     {
+      "@id": "odta:ZooEnumerationPlaceholder",
+      "@type": "odta:ZooEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
+    },
+    {
       "@id": "odta:HealthResortEnumeration",
       "@type": "rdfs:Class",
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
@@ -344,11 +443,39 @@
       "rdfs:subClassOf": "schema:Enumeration"
     },
     {
+      "@id": "odta:HealthResortEnumerationPlaceholder",
+      "@type": "odta:HealthResortEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
+    },
+    {
       "@id": "odta:PublicSwimmingPoolEnumeration",
       "@type": "rdfs:Class",
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
       "rdfs:label": "PublicSwimmingPoolEnumeration",
       "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:PublicSwimmingPoolEnumerationPlaceholder",
+      "@type": "odta:PublicSwimmingPoolEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
     },
     {
       "@id": "odta:Zoo",
@@ -377,6 +504,20 @@
       "rdfs:comment": "A tourist attraction type for specifying technical tourist attractions.",
       "rdfs:label": "LodgingBusinessThemeEnumeration",
       "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:LodgingBusinessThemeEnumerationPlaceholder",
+      "@type": "odta:LodgingBusinessThemeEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
     },
     {
       "@id": "odta:CongressCenter",
@@ -1030,8 +1171,7 @@
       "schema:rangeIncludes": [
         "odta:LodgingBusinessThemeEnumeration",
         "odta:EventThemeEnumeration",
-        "odta:MuseumThemeEnumeration",
-        "odta:EventThemeEnumeration"
+        "odta:MuseumThemeEnumeration"
       ]
     },
     {
@@ -1121,6 +1261,20 @@
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
       "rdfs:label": "EventThemeEnumeration",
       "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:EventThemeEnumerationPlaceholder",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
     },
     {
       "@id": "odta:LodgingBusinessEnumeration",
