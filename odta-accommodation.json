@@ -1,0 +1,1666 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/",
+    "odta": "https://example-vocab.ex/",
+    "rdfs:subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@id"
+    },
+    "schema:domainIncludes": {
+      "@id": "schema:domainIncludes",
+      "@type": "@id"
+    },
+    "schema:rangeIncludes": {
+      "@id": "schema:rangeIncludes",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "@id": "odta:OccupancyMeasurementSpecification",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A measurement to specify the occupancy for places and events.",
+      "rdfs:label": "OccupancyMeasurementSpecification",
+      "rdfs:subClassOf": "schema:QuantitativeValue"
+    },
+    {
+      "@id": "odta:occupancyMeasurement",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Instances of Place types to which an occupancy measurement attached serve as the 'target area'.",
+      "rdfs:label": "occupancyMeasurement",
+      "schema:domainIncludes": "schema:Place",
+      "schema:rangeIncludes": "odta:OccupancyMeasurementSpecification"
+    },
+    {
+      "@id": "odta:measurementProcess",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property for specifying various characteristics of the measurement process is requested.",
+      "rdfs:label": "measurementProcess",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "odta:MeasurementProcessEnumeration"
+    },
+    {
+      "@id": "odta:precision",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A measurement has a certain precision. This precision is described with the newly introduced precision property to the OccupancyMeasurementSpecification type.",
+      "rdfs:label": "precision",
+      "schema:domainIncludes": [
+        "odta:OccupancyMeasurementSpecification",
+        "odta:MeasurementProcessEnumeration",
+        "odta:MeasurementTechniqueEnumeration"
+      ],
+      "schema:rangeIncludes": "schema:Number"
+    },
+    {
+      "@id": "odta:validity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A measurement has a certain validity value. This validity value is described with the newly introduced validity property to the OccupancyMeasurementSpecification type.",
+      "rdfs:label": "validity",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "schema:Number"
+    },
+    {
+      "@id": "odta:condition",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A measurement may be affected by various factors, especially when it is a forecast. To specify those factors, we recommend the introduction of the condition property with a textual range.",
+      "rdfs:label": "condition",
+      "schema:domainIncludes": [
+        "odta:OccupancyMeasurementSpecification",
+        "odta:MeasurementProcessEnumeration"
+      ],
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "schema:measurementTechnique",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property for specifying various characteristics of measurement techniques.",
+      "rdfs:label": "measurementTechnique",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "odta:MeasurementTechniqueEnumeration"
+    },
+    {
+      "@id": "schema:value",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The value of the quantitative value or property value node.",
+      "rdfs:label": "value",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "schema:Number"
+    },
+    {
+      "@id": "schema:unitCode",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.",
+      "rdfs:label": "unitCode",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:measurementArea",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.",
+      "rdfs:label": "measurementArea",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "schema:Place"
+    },
+    {
+      "@id": "schema:maximumAttendeeCapacity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The total number of individuals that may attend an event or venue.",
+      "rdfs:label": "maximumAttendeeCapacity",
+      "schema:domainIncludes": [
+        "schema:Place",
+        "schema:TouristAttraction"
+      ],
+      "schema:rangeIncludes": [
+        "schema:Number",
+        "schema:Integer"
+      ]
+    },
+    {
+      "@id": "schema:openingHoursSpecification",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The opening hours of a certain place.",
+      "rdfs:label": "openingHoursSpecification",
+      "schema:domainIncludes": "schema:Place",
+      "schema:rangeIncludes": "schema:OpeningHoursSpecification"
+    },
+    {
+      "@id": "odta:guideSpecification",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The opening hours of a certain place.",
+      "rdfs:label": "guideSpecification",
+      "schema:domainIncludes": "schema:TouristTrip",
+      "schema:rangeIncludes": "odta:TouristTripGuidanceEnumeration"
+    },
+    {
+      "@id": "schema:accessibilityFeature",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property for specifying accessibility features of lodging businesses..",
+      "rdfs:label": "accessibilityFeature",
+      "schema:domainIncludes": [
+        "schema:TouristTrip",
+        "schema:LodgingBusiness"
+      ],
+      "schema:rangeIncludes": "schema:LocationFeatureSpecification"
+    },
+    {
+      "@id": "schema:additionalProperty",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.",
+      "rdfs:label": "additionalProperty",
+      "schema:domainIncludes": [
+        "odta:HealthResort",
+        "schema:Place",
+        "odta:CaveOrMine",
+        "odta:Sauna",
+        "odta:EventVenue",
+        "odta:Zoo"
+      ],
+      "schema:rangeIncludes": "schema:PropertyValue"
+    },
+    {
+      "@id": "schema:additionalType",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A mechanism to model the differentiation is requested. Since both are still measurements, we differentiate them with a newly proposed kindOfMeasurement property with OccupancyMeasurementEnumeration type.",
+      "rdfs:label": "additionalType",
+      "schema:domainIncludes": "odta:TechnicalTouristAttraction",
+      "schema:rangeIncludes": "schema:URL"
+    },
+    {
+      "@id": "odta:kindOfMeasurement",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A mechanism to model the differentiation is requested. Since both are still measurements, we differentiate them with a newly proposed kindOfMeasurement property with OccupancyMeasurementEnumeration type.",
+      "rdfs:label": "kindOfMeasurement",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "odta:OccupancyMeasurementEnumeration"
+    },
+    {
+      "@id": "odta:measurementInterpretation",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The property takes MeasurementInterpretationEnum values for this purpose. The interpretation of the measurement values into certain categories should be left to applications.",
+      "rdfs:label": "measurementInterpretation",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "odta:MeasurementInterpretationEnum"
+    },
+    {
+      "@id": "odta:measurementTime",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property to specify the measurement time or period and interval.",
+      "rdfs:label": "measurementTime",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "schema:DateTime"
+    },
+    {
+      "@id": "odta:measurementStartTime",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property to specify the start time of a measurement.",
+      "rdfs:label": "measurementStartTime",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "schema:DateTime"
+    },
+    {
+      "@id": "odta:measurementEndTime",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property to specify the end time of a measurement.",
+      "rdfs:label": "measurementEndTime",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "schema:DateTime"
+    },
+    {
+      "@id": "odta:addressDistrict",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property for increasing the granularity of administrative areas.",
+      "rdfs:label": "addressDistrict",
+      "schema:domainIncludes": "schema:PostalAddress",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:architecturalStyle",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The architectural style of a building.",
+      "rdfs:label": "architecturalStyle",
+      "schema:domainIncludes": "schema:LandmarksOrHistoricalBuildings",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:hasRuins",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The building has ruins.",
+      "rdfs:label": "architecturalStyle",
+      "schema:domainIncludes": "schema:LandmarksOrHistoricalBuildings",
+      "schema:rangeIncludes": "schema:Boolean"
+    },
+    {
+      "@id": "odta:architect",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Architect of a building.",
+      "rdfs:label": "architect",
+      "schema:domainIncludes": "schema:LandmarksOrHistoricalBuildings",
+      "schema:rangeIncludes": "schema:Person"
+    },
+    {
+      "@id": "odta:HealthResort",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "Health resort class.",
+      "rdfs:label": "HealthResort",
+      "rdfs:subClassOf": "schema:TouristAttraction"
+    },
+    {
+      "@id": "odta:focusedHealthIssues",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Focus of health issues of a health resort.",
+      "rdfs:label": "focusedHealthIssues",
+      "schema:domainIncludes": "odta:HealthResort",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:naturalRemedy",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Natural remedy of a health resort.",
+      "rdfs:label": "naturalRemedy",
+      "schema:domainIncludes": "odta:HealthResort",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:treatmentModality",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Modality of treatment of a health resort.",
+      "rdfs:label": "treatmentModality",
+      "schema:domainIncludes": "odta:HealthResort",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:CaveOrMine",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "The cave or mine class.",
+      "rdfs:label": "CaveOrMine",
+      "rdfs:subClassOf": "schema:TouristAttraction"
+    },
+    {
+      "@id": "odta:CaveOrMineEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "CaveOrMineEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:CongressCenterEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "CongressCenterEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:NatureAttractionEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "NatureAttractionEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:EventVenueEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "EventVenueEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:SaunaEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "SaunaEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:SportsActivityLocationEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "SportsActivityLocationEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:ZooEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "ZooEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:HealthResortEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "HealthResortEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:PublicSwimmingPoolEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "PublicSwimmingPoolEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:Zoo",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A Zoo.",
+      "rdfs:label": "Zoo",
+      "rdfs:subClassOf": "schema:TouristAttraction"
+    },
+    {
+      "@id": "odta:Sauna",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "The sauna class.",
+      "rdfs:label": "Sauna",
+      "rdfs:subClassOf": "schema:TouristAttraction"
+    },
+    {
+      "@id": "odta:TechnicalTouristAttraction",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A tourist attraction type for specifying technical tourist attractions.",
+      "rdfs:label": "TechnicalTouristAttraction",
+      "rdfs:subClassOf": "schema:TouristAttraction"
+    },
+    {
+      "@id": "odta:LodgingBusinessThemeEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A tourist attraction type for specifying technical tourist attractions.",
+      "rdfs:label": "LodgingBusinessThemeEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:CongressCenter",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A tourist attraction a congress center.",
+      "rdfs:label": "CongressCenter",
+      "rdfs:subClassOf": "schema:TouristAttraction"
+    },
+    {
+      "@id": "odta:NatureAttraction",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A tourist attraction natural attractions.",
+      "rdfs:label": "NatureAttraction",
+      "rdfs:subClassOf": "schema:TouristAttraction"
+    },
+    {
+      "@id": "odta:EventVenue",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "A tourist attraction natural attractions.",
+      "rdfs:label": "EventVenue",
+      "rdfs:subClassOf": "schema:Place"
+    },
+    {
+      "@id": "odta:finnishSauna",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The canonical list of values for finnishSauna (e.g., bio-sauna), steamBath(e.g., hamam, banja), and bathtubAndShowers (e.g., pool).",
+      "rdfs:label": "finnishSauna",
+      "schema:domainIncludes": "odta:Sauna",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:steamBath",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Description of steam bath.",
+      "rdfs:label": "steamBath",
+      "schema:domainIncludes": "odta:Sauna",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:bathtubsAndShowers",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Description of bathtubs and showers.",
+      "rdfs:label": "bathtubsAndShowers",
+      "schema:domainIncludes": "odta:Sauna",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "schema:hasOfferCatalog",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Indicates an OfferCatalog listing for this Organization, Person, or Service.",
+      "rdfs:label": "hasOfferCatalog",
+      "schema:domainIncludes": [
+        "odta:Sauna",
+        "schema:Museum"
+      ],
+      "schema:rangeIncludes": "schema:OfferCatalog"
+    },
+    {
+      "@id": "odta:transportationMode",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Type of transportation.",
+      "rdfs:label": "transportationMode",
+      "schema:domainIncludes": "schema:TouristAttraction",
+      "schema:rangeIncludes": "odta:TransportationModeEnumeration"
+    },
+    {
+      "@id": "odta:kindOfPOI",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Architect of a building.",
+      "rdfs:label": "kindOfPOI",
+      "schema:domainIncludes": [
+        "odta:CaveOrMine",
+        "odta:CongressCenter",
+        "odta:HealthResort",
+        "odta:NatureAttraction",
+        "odta:Sauna",
+        "schema:PublicSwimmingPool",
+        "odta:EventVenue",
+        "schema:SportsActivityLocation"
+      ],
+      "schema:rangeIncludes": [
+        "odta:CaveOrMineEnumeration",
+        "odta:CongressCenterEnumeration",
+        "odta:HealthResortEnumeration",
+        "odta:NatureAttractionEnumeration",
+        "odta:SaunaEnumeration",
+        "odta:PublicSwimmingPoolEnumeration",
+        "odta:EventVenueEnumeration",
+        "odta:SportsActivityLocationEnumeration"
+      ]
+    },
+    {
+      "@id": "odta:accessModality",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Type of access.",
+      "rdfs:label": "accessModality",
+      "schema:domainIncludes": "odta:CaveOrMine",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:numberOfLevels",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Number of levels of a building.",
+      "rdfs:label": "numberOfLevels",
+      "schema:domainIncludes": "odta:CaveOrMine",
+      "schema:rangeIncludes": "schema:Integer"
+    },
+    {
+      "@id": "odta:numberOfStairs",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Number of stairs of a building.",
+      "rdfs:label": "numberOfStairs",
+      "schema:domainIncludes": "odta:CaveOrMine",
+      "schema:rangeIncludes": "schema:Integer"
+    },
+    {
+      "@id": "odta:pathCondition",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Condition of path.",
+      "rdfs:label": "pathCondition",
+      "schema:domainIncludes": "odta:CaveOrMine",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:pathLength",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Length of path.",
+      "rdfs:label": "pathLength",
+      "schema:domainIncludes": "odta:CaveOrMine",
+      "schema:rangeIncludes": "schema:QuantitativeValue"
+    },
+    {
+      "@id": "odta:undergroundDripActivity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Dripping activity underground.",
+      "rdfs:label": "undergroundDripActivity",
+      "schema:domainIncludes": "odta:CaveOrMine",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:undergroundHumidity",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Humidity underground.",
+      "rdfs:label": "undergroundHumidity",
+      "schema:domainIncludes": "odta:CaveOrMine",
+      "schema:rangeIncludes": "schema:QuantitativeValue"
+    },
+    {
+      "@id": "odta:undergroundTemperature",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Temperature underground.",
+      "rdfs:label": "undergroundTemperature",
+      "schema:domainIncludes": "odta:CaveOrMine",
+      "schema:rangeIncludes": "schema:QuantitativeValue"
+    },
+    {
+      "@id": "odta:measurementInterval",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property to specify a measurement interval.",
+      "rdfs:label": "measurementInterval",
+      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
+      "schema:rangeIncludes": "schema:DateTime"
+    },
+    {
+      "@id": "odta:relatedPerson",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A related person.",
+      "rdfs:label": "relatedPerson",
+      "schema:domainIncludes": "schema:TouristAttraction",
+      "schema:rangeIncludes": "schema:Person"
+    },
+    {
+      "@id": "odta:guidanceSupport",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A related person.",
+      "rdfs:label": "guidanceSupport",
+      "schema:domainIncludes": "odta:TouristTripGuidanceEnumeration",
+      "schema:rangeIncludes": "odta:TouristTripGuidanceSupportEnumeration"
+    },
+    {
+      "@id": "odta:inLanguage",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A related person.",
+      "rdfs:label": "guidanceSupport",
+      "schema:domainIncludes": [
+        "schema:TouristTrip",
+        "schema:Event"
+      ],
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "odta:TouristTripGuidanceSupportEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of transportation.",
+      "rdfs:label": "TouristTripGuidanceSupportEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:TouristTripGuidanceSupportEnumerationTourGuide",
+      "@type": "odta:TouristTripGuidanceSupportEnumeration",
+      "rdfs:comment": "Guided with a tour guide touristic trip.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Guided with a tour guide"
+        },{
+          "@language": "de",
+          "@value": "geführt mit einem Reiseführer"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TouristTripGuidanceSupportEnumerationAudioguide",
+      "@type": "odta:TouristTripGuidanceSupportEnumeration",
+      "rdfs:comment": "Guided with a audio guide touristic trip.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Guided with an audio guide"
+        },{
+          "@language": "de",
+          "@value": "geführt mit einem Autoguide"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TouristTripGuidanceSupportEnumerationBooklet",
+      "@type": "odta:TouristTripGuidanceSupportEnumeration",
+      "rdfs:comment": "Guided with a audio guide touristic trip.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Guided with a booklet"
+        },{
+          "@language": "de",
+          "@value": "Geführt mit einer Broschüre"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TouristTripGuidanceEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of transportation.",
+      "rdfs:label": "TouristTripGuidanceEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:TouristTripGuidanceEnumerationGuided",
+      "@type": "odta:TouristTripGuidanceEnumeration",
+      "rdfs:comment": "Guided touristic trip.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Guided"
+        },{
+          "@language": "de",
+          "@value": "mit Führung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TouristTripGuidanceEnumerationNotGuided",
+      "@type": "odta:TouristTripGuidanceEnumeration",
+      "rdfs:comment": "Not guided touristic trip.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "not guided"
+        },{
+          "@language": "de",
+          "@value": "ohne Führung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TouristTripGuidanceEnumerationSelfGuided",
+      "@type": "odta:TouristTripGuidanceEnumeration",
+      "rdfs:comment": "Not guided touristic trip.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "self guided"
+        },{
+          "@language": "de",
+          "@value": "selbstgeführt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of transportation.",
+      "rdfs:label": "TransportationModeEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationByBus",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "Bus transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "By bus"
+        },{
+          "@language": "de",
+          "@value": "mit dem Bus"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationOnFoot",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "By foot transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "On foot"
+        },{
+          "@language": "de",
+          "@value": "zu Fuß"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationByBicycle",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "By bicycle transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "By bicycle"
+        },{
+          "@language": "de",
+          "@value": "mit dem Fahrrad"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationByCar",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "By car transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "By car"
+        },{
+          "@language": "de",
+          "@value": "mit dem Auto"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationByCarriage",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "By carriage transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "By carriage"
+        },{
+          "@language": "de",
+          "@value": "mit dem Kutsche"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationByBoat",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "By boat transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "By boat"
+        },{
+          "@language": "de",
+          "@value": "mit dem Boot"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationByShip",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "By ship transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "By ship"
+        },{
+          "@language": "de",
+          "@value": "mit dem Schiff"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationByCanoe",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "By canoe transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "By canoe"
+        },{
+          "@language": "de",
+          "@value": "mit dem Kanu"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationBySegway",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "By segway transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "By segway"
+        },{
+          "@language": "de",
+          "@value": "mit dem Segway"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TransportationModeEnumerationByEScooter",
+      "@type": "odta:TransportationModeEnumeration",
+      "rdfs:comment": "By e-scooter transportation mode.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "By e-scooter"
+        },{
+          "@language": "de",
+          "@value": "mit dem E-Roller"
+        }
+      ]
+    },
+    {
+      "@id": "odta:OccupancyMeasurementEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "OccupancyMeasurementEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:OccupancyMeasurementEnumerationActualMeasurement",
+      "@type": "odta:OccupancyMeasurementEnumeration",
+      "rdfs:comment": "Actual measurement",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Actual measurement of occupancy"
+        },{
+          "@language": "de",
+          "@value": "Ist-Messung der Auslastung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:OccupancyMeasurementEnumerationForecastMeasurement",
+      "@type": "odta:OccupancyMeasurementEnumeration",
+      "rdfs:comment": "Forecast measurement",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Forecasted measurement of occupancy"
+        },{
+          "@language": "de",
+          "@value": "Prognose der Auslastung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MeasurementInterpretationEnum",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists interpretations for measurements.",
+      "rdfs:label": "MeasurementInterpretationEnum",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:MeasurementInterpretationEnumRed",
+      "@type": "odta:MeasurementInterpretationEnum",
+      "rdfs:comment": "Member MeasurementInterpretationEnum",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Red"
+        },{
+          "@language": "de",
+          "@value": "Rot"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MeasurementInterpretationEnumYellow",
+      "@type": "odta:MeasurementInterpretationEnum",
+      "rdfs:comment": "Member MeasurementInterpretationEnum",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Yellow"
+        },{
+          "@language": "de",
+          "@value": "Gelb"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MeasurementInterpretationEnumGreen",
+      "@type": "odta:MeasurementInterpretationEnum",
+      "rdfs:comment": "Member MeasurementInterpretationEnum",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Green"
+        },{
+          "@language": "de",
+          "@value": "Grün"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MuseumThemeEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists measurement processes.",
+      "rdfs:label": "MuseumThemeEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:MeasurementProcessEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists measurement processes.",
+      "rdfs:label": "MeasurementProcessEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:MeasurementProcessEnumerationContinuousMeasurement",
+      "@type": "odta:MeasurementProcessEnumeration",
+      "rdfs:comment": "Member MeasurementProcessEnumeration",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Continuous measurement"
+        },{
+          "@language": "de",
+          "@value": "Durchgangsmessung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MeasurementProcessEnumerationAreaMeasurement",
+      "@type": "odta:MeasurementProcessEnumeration",
+      "rdfs:comment": "Member MeasurementProcessEnumeration",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Area measurement"
+        },{
+          "@language": "de",
+          "@value": "Flächenmessung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MeasurementTechniqueEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurement techniques.",
+      "rdfs:label": "MeasurementTechniqueEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:MeasurementTechniqueEnumerationHardwareBased",
+      "@type": "odta:MeasurementTechniqueEnumeration",
+      "rdfs:comment": "Member MeasurementTechniqueEnumeration",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Hardware-based technique"
+        },{
+          "@language": "de",
+          "@value": "Hardware-basierte Technik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MeasurementTechniqueEnumerationSoftwareBased",
+      "@type": "odta:MeasurementTechniqueEnumeration",
+      "rdfs:comment": "Member MeasurementTechniqueEnumeration",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Software-based technique"
+        },{
+          "@language": "de",
+          "@value": "Software-basierte Technik"
+        }
+      ]
+    },
+    {
+      "@id": "schema:address",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Physical address of the item.",
+      "rdfs:label": "address",
+      "schema:domainIncludes": "schema:LodgingBusiness",
+      "schema:rangeIncludes": "schema:PostalAddress"
+    },
+    {
+      "@id": "schema:addressRegion",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level Administrative division.",
+      "rdfs:label": "addressRegion",
+      "schema:domainIncludes": "schema:PostalAddress",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "schema:hasCredential",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A credential awarded to the Person or Organization.",
+      "rdfs:label": "hasCredential",
+      "schema:domainIncludes": "schema:LodgingBusiness",
+      "schema:rangeIncludes": "schema:EducationalOccupationalCredential"
+    },
+    {
+      "@id": "schema:image",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A credential awarded to the Person or Organization.",
+      "rdfs:label": "hasCredential",
+      "schema:domainIncludes": "schema:LodgingBusiness",
+      "schema:rangeIncludes": [
+        "schema:ImageObject",
+        "schema:URL"
+      ]
+    },
+    {
+      "@id": "schema:containsPlace",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A credential awarded to the Person or Organization.",
+      "rdfs:label": "hasCredential",
+      "schema:domainIncludes": "schema:TouristAttraction",
+      "schema:rangeIncludes": "schema:ParkingFacility"
+    },
+    {
+      "@id": "odta:theme",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property for the segment or focused theme of a lodging business",
+      "rdfs:label": "theme",
+      "schema:domainIncludes": [
+        "schema:LodgingBusiness",
+        "schema:Event",
+        "schema:Museum",
+        "schema:TouristTrip"
+      ],
+      "schema:rangeIncludes": [
+        "odta:LodgingBusinessThemeEnumeration",
+        "odta:EventThemeEnumeration",
+        "odta:MuseumThemeEnumeration",
+        "odta:EventThemeEnumeration"
+      ]
+    },
+    {
+      "@id": "odta:kindOfEvent",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A property to distinguish different 'types' of events.",
+      "rdfs:label": "kindOfEvent",
+      "schema:domainIncludes": "schema:Event",
+      "schema:rangeIncludes": "odta:EventEnumeration"
+    },
+    {
+      "@id": "schema:copyrightHolder",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A credential awarded to the Person or Organization.",
+      "rdfs:label": "hasCredential",
+      "schema:domainIncludes": "schema:ImageObject",
+      "schema:rangeIncludes": [
+        "schema:Person",
+        "schema:Organization"
+      ]
+    },
+    {
+      "@id": "schema:makesOffer",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A pointer to products or services offered by the organization or person.",
+      "rdfs:label": "makesOffer",
+      "schema:domainIncludes": "schema:ImageObject",
+      "schema:rangeIncludes": "schema:Offer"
+    },
+    {
+      "@id": "schema:description",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A description of the item.",
+      "rdfs:label": "description",
+      "schema:domainIncludes": "schema:Offer",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "schema:itemOffered",
+      "@type": "rdf:Property",
+      "rdfs:comment": "An item being offered (or demanded). The transactional nature of the offer or demand is documented using businessFunction, e.g. sell, lease etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such as Product or a subtype of Product, can clarify the nature of the offer. Inverse property: offers",
+      "rdfs:label": "itemOffered",
+      "schema:domainIncludes": "schema:Offer",
+      "schema:rangeIncludes": [
+        "schema:Accommodation",
+        "schema:Product"
+      ]
+    },
+    {
+      "@id": "schema:accommodationCategory",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Category of an Accommodation, following real estate conventions e.g. RESO (see PropertySubType, and PropertyType fields for suggested values).",
+      "rdfs:label": "accommodationCategory",
+      "schema:domainIncludes": "schema:Accommodation",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "schema:currenciesAccepted",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The currency accepted.",
+      "rdfs:label": "currenciesAccepted",
+      "schema:domainIncludes": "schema:LocalBusiness",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
+      "@id": "schema:paymentAccepted",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The currency accepted.",
+      "rdfs:label": "paymentAccepted",
+      "schema:domainIncludes": "schema:LodgingBusiness",
+      "schema:rangeIncludes": [
+        "schema:Text",
+        "schema:PaymentMethod"
+      ]
+    },
+    {
+      "@id": "odta:kindOfLodgingBusiness",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The currency accepted.",
+      "rdfs:label": "kindOfLodgingBusiness",
+      "schema:domainIncludes": "schema:LodgingBusiness",
+      "schema:rangeIncludes": "odta:LodgingBusinessEnumeration"
+    },
+    {
+      "@id": "odta:EventThemeEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "EventThemeEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
+      "rdfs:label": "LodgingBusinessEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationAllSuiteHotel",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "AllSuiteHotel",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "All-Suite-Hotel"
+        },{
+          "@language": "de",
+          "@value": "All-Suite-Hotel"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationApartmentHotel",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "ApartmentHotel",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Apartment hotel"
+        },{
+          "@language": "de",
+          "@value": "Apartmenthotel"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationFarm",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "Farm",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Farm"
+        },{
+          "@language": "de",
+          "@value": "Bauernhof"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationServicedApartment",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "ServicedApartment",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Serviced apartment"
+        },{
+          "@language": "de",
+          "@value": "Boardinghouse"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationVacationHome",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "VacationHome",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Vacation (holiday) home"
+        },{
+          "@language": "de",
+          "@value": "Ferienhaus"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationVacationApartment",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "VacationApartment",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Vacation(holiday) apartment"
+        },{
+          "@language": "de",
+          "@value": "Ferienwohnung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationInn",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "Inn",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Inn"
+        },{
+          "@language": "de",
+          "@value": "Gasthof"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationBoardingHouse",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "BoardingHouse",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Boarding house"
+        },{
+          "@language": "de",
+          "@value": "Gästehaus"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationHotel",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "Hotel",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Hotel"
+        },{
+          "@language": "de",
+          "@value": "Hotel"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationHotelGarni",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "HotelGarni",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Hotel garni"
+        },{
+          "@language": "de",
+          "@value": "Hotel garni"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationYouthHostel",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "YouthHostel",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Youth hostel"
+        },{
+          "@language": "de",
+          "@value": "Jugendherberge"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationSanatorium",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "Sanatorium",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Sanatorium"
+        },{
+          "@language": "de",
+          "@value": "Sanatorium"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationMotel",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "Motel",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Motel"
+        },{
+          "@language": "de",
+          "@value": "Motel"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationPension",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "Pension",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Pension"
+        },{
+          "@language": "de",
+          "@value": "Pension"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationVacationRoom",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "VacationRoom",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Vacation (holiday) room"
+        },{
+          "@language": "de",
+          "@value": "Ferienzimmer"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationTouristResort",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "TouristResort",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Tourist resort"
+        },{
+          "@language": "de",
+          "@value": "Ferienpark"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationGroupLodging",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "TouristResort",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Group lodging"
+        },{
+          "@language": "de",
+          "@value": "Gruppenunterkunft"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationHostel",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "Hostel",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Hostel"
+        },{
+          "@language": "de",
+          "@value": "Hostel"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationCampground",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "Campground",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Campground"
+        },{
+          "@language": "de",
+          "@value": "Campingplatz"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LodgingBusinessEnumerationCamperPark",
+      "@type": "odta:LodgingBusinessEnumeration",
+      "rdfs:comment": "CamperPark",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Camper park"
+        },{
+          "@language": "de",
+          "@value": "Wohnmobilstellplatz"
+        }
+      ]
+    },
+    {
+      "@id": "odta:DoubleBed",
+      "@type": "schema:BedType",
+      "rdfs:comment": "Double bed",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Double bed"
+        },{
+          "@language": "de",
+          "@value": "Doppelbett"
+        }
+      ]
+    },
+    {
+      "@id": "odta:KingSizeBed",
+      "@type": "schema:BedType",
+      "rdfs:comment": "King size bed",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "King size bed"
+        },{
+          "@language": "de",
+          "@value": "Kingsize-Bett"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SingleBed",
+      "@type": "schema:BedType",
+      "rdfs:comment": "Single bed",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Single bed"
+        },{
+          "@language": "de",
+          "@value": "Einzelbett"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "EventEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:EventEnumerationBall",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Ball",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Ball"
+        },{
+          "@language": "de",
+          "@value": "Ball"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationCostumeBall",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "CostumeBall",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Costume ball"
+        },{
+          "@language": "de",
+          "@value": "Kostümball"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationDanceClub",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "DanceClub",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Dance club"
+        },{
+          "@language": "de",
+          "@value": "Tanztreff"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationDancePerformance",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "DancePerformance",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Dance performance"
+        },{
+          "@language": "de",
+          "@value": "Tanzvorführung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationDisco",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Disco",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Disco"
+        },{
+          "@language": "de",
+          "@value": "Discothek"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationMaskedBall",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "MaskedBall",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Masked ball"
+        },{
+          "@language": "de",
+          "@value": "Maskenball"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationOperaBall",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "OperaBall",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Opera ball"
+        },{
+          "@language": "de",
+          "@value": "Opernball"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationParty",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Party",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Party"
+        },{
+          "@language": "de",
+          "@value": "Party"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationColloquium",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Colloquium",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Colloquium"
+        },{
+          "@language": "de",
+          "@value": "Kolloquium"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationExcursion",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Excursion",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Excursion"
+        },{
+          "@language": "de",
+          "@value": "Exkursion"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationFurtherEducation",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "FurtherEducation",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Further education"
+        },{
+          "@language": "de",
+          "@value": "Weiterbildung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationLanguageCourse",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "LanguageCourse",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Language course"
+        },{
+          "@language": "de",
+          "@value": "Sprachkurs"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationPaintingCourse",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "PaintingCourse",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Painting class"
+        },{
+          "@language": "de",
+          "@value": "Malkurs"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationPaintingSeminar",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Seminar",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Seminar"
+        },{
+          "@language": "de",
+          "@value": "Seminar"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EventEnumerationPaintingWorkshop",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Workshop",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Workshop"
+        },{
+          "@language": "de",
+          "@value": "Workshop"
+        }
+      ]
+    }
+  ],
+  "@id": "https://semantify.it/voc/odta2022"
+}
+
