@@ -43,6 +43,14 @@
       "schema:rangeIncludes": "odta:MeasurementProcessEnumeration"
     },
     {
+      "@id": "odta:licenseValidFrom",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The validity start date of a license.",
+      "rdfs:label": "licenseValidFrom",
+      "schema:domainIncludes": "schema:CreativeWork",
+      "schema:rangeIncludes": "schema:Date"
+    },
+    {
       "@id": "odta:precision",
       "@type": "rdf:Property",
       "rdfs:comment": "A measurement has a certain precision. This precision is described with the newly introduced precision property to the OccupancyMeasurementSpecification type.",
