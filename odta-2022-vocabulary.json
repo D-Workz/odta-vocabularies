@@ -1284,10 +1284,6 @@
       ]
     },
     {
-      "@id": "goodrelations:ByBankTransferInAdvance",
-      "@type": "schema:PaymentMethod"
-    },
-    {
       "@id": "odta:LodgingBusinessEnumeration",
       "@type": "rdfs:Class",
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
