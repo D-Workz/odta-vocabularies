@@ -72,6 +72,14 @@
       "schema:rangeIncludes": "schema:Number"
     },
     {
+      "@id": "schema:petsAllowed",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A measurement has a certain validity value. This validity value is described with the newly introduced validity property to the OccupancyMeasurementSpecification type.",
+      "rdfs:label": "petsAllowed",
+      "schema:domainIncludes": "schema:TouristAttraction",
+      "schema:rangeIncludes": "schema:Boolean"
+    },
+    {
       "@id": "odta:condition",
       "@type": "rdf:Property",
       "rdfs:comment": "A measurement may be affected by various factors, especially when it is a forecast. To specify those factors, we recommend the introduction of the condition property with a textual range.",
@@ -1275,6 +1283,10 @@
           "@value": "Platzhalter"
         }
       ]
+    },
+    {
+      "@id": "goodrelations:ByBankTransferInAdvance",
+      "@type": "schema:PaymentMethod"
     },
     {
       "@id": "odta:LodgingBusinessEnumeration",
