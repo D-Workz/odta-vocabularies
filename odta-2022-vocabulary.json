@@ -206,7 +206,7 @@
         "odta:CaveOrMine",
         "odta:Sauna",
         "schema:EventVenue",
-        "odta:Zoo"
+        "schema:Zoo"
       ],
       "schema:rangeIncludes": "schema:PropertyValue"
     },
@@ -518,13 +518,6 @@
       ]
     },
     {
-      "@id": "odta:Zoo",
-      "@type": "rdfs:Class",
-      "rdfs:comment": "A Zoo.",
-      "rdfs:label": "Zoo",
-      "rdfs:subClassOf": "schema:TouristAttraction"
-    },
-    {
       "@id": "odta:Sauna",
       "@type": "rdfs:Class",
       "rdfs:comment": "The sauna class.",
@@ -648,7 +641,8 @@
         "odta:Sauna",
         "schema:PublicSwimmingPool",
         "schema:EventVenue",
-        "schema:SportsActivityLocation"
+        "schema:SportsActivityLocation",
+        "schema:Zoo"
       ],
       "schema:rangeIncludes": [
         "odta:CaveOrMineEnumeration",
@@ -658,7 +652,8 @@
         "odta:SaunaEnumeration",
         "odta:PublicSwimmingPoolEnumeration",
         "schema:EventVenueEnumeration",
-        "odta:SportsActivityLocationEnumeration"
+        "odta:SportsActivityLocationEnumeration",
+        "odta:ZooEnumeration"
       ]
     },
     {
