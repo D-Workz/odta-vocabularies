@@ -590,6 +590,25 @@
       "schema:rangeIncludes": "schema:Text"
     },
     {
+      "@id": "schema:url",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Description of steam bath.",
+      "rdfs:label": "url",
+      "schema:domainIncludes": "schema:LinkRole",
+      "schema:rangeIncludes": [
+        "schema:URL",
+        "schema:LinkRole"
+      ]
+    },
+    {
+      "@id": "schema:roleName",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Description of steam bath.",
+      "rdfs:label": "roleName",
+      "schema:domainIncludes": "schema:LinkRole",
+      "schema:rangeIncludes": "schema:Text"
+    },
+    {
       "@id": "odta:bathtubsAndShowers",
       "@type": "rdf:Property",
       "rdfs:comment": "Description of bathtubs and showers.",
