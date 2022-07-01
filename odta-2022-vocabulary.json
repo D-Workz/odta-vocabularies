@@ -84,9 +84,12 @@
     {
       "@id": "schema:makesOffer",
       "@type": "rdf:Property",
-      "rdfs:comment": "Indicates whether pets are allowed to enter the accommodation or lodging business. More detailed information can be put in a text value.",
+      "rdfs:comment": "A pointer to products or services offered by the organization or person.",
       "rdfs:label": "makesOffer",
-      "schema:domainIncludes": "schema:Place",
+      "schema:domainIncludes": [
+        "schema:ImageObject",
+        "schema:Place"
+      ],
       "schema:rangeIncludes": "schema:Offer"
     },
     {
@@ -1213,14 +1216,6 @@
         "schema:Person",
         "schema:Organization"
       ]
-    },
-    {
-      "@id": "schema:makesOffer",
-      "@type": "rdf:Property",
-      "rdfs:comment": "A pointer to products or services offered by the organization or person.",
-      "rdfs:label": "makesOffer",
-      "schema:domainIncludes": "schema:ImageObject",
-      "schema:rangeIncludes": "schema:Offer"
     },
     {
       "@id": "schema:description",
