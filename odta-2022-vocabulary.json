@@ -1152,22 +1152,6 @@
       ]
     },
     {
-      "@id": "schema:address",
-      "@type": "rdf:Property",
-      "rdfs:comment": "Physical address of the item.",
-      "rdfs:label": "address",
-      "schema:domainIncludes": "schema:LodgingBusiness",
-      "schema:rangeIncludes": "schema:PostalAddress"
-    },
-    {
-      "@id": "schema:addressRegion",
-      "@type": "rdf:Property",
-      "rdfs:comment": "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level Administrative division.",
-      "rdfs:label": "addressRegion",
-      "schema:domainIncludes": "schema:PostalAddress",
-      "schema:rangeIncludes": "schema:Text"
-    },
-    {
       "@id": "schema:hasCredential",
       "@type": "rdf:Property",
       "rdfs:comment": "A credential awarded to the Person or Organization.",
@@ -1179,7 +1163,7 @@
       "@id": "schema:image",
       "@type": "rdf:Property",
       "rdfs:comment": "A credential awarded to the Person or Organization.",
-      "rdfs:label": "hasCredential",
+      "rdfs:label": "image",
       "schema:domainIncludes": "schema:LodgingBusiness",
       "schema:rangeIncludes": [
         "schema:ImageObject",
@@ -1190,7 +1174,7 @@
       "@id": "schema:containsPlace",
       "@type": "rdf:Property",
       "rdfs:comment": "A credential awarded to the Person or Organization.",
-      "rdfs:label": "hasCredential",
+      "rdfs:label": "containsPlace",
       "schema:domainIncludes": "schema:TouristAttraction",
       "schema:rangeIncludes": "schema:ParkingFacility"
     },
