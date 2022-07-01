@@ -392,15 +392,15 @@
       ]
     },
     {
-      "@id": "schema:EventVenueEnumeration",
+      "@id": "odta:EventVenueEnumeration",
       "@type": "rdfs:Class",
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
       "rdfs:label": "EventVenueEnumeration",
       "rdfs:subClassOf": "schema:Enumeration"
     },
     {
-      "@id": "schema:EventVenueEnumerationPlaceholder",
-      "@type": "schema:EventVenueEnumeration",
+      "@id": "odta:EventVenueEnumerationPlaceholder",
+      "@type": "odta:EventVenueEnumeration",
       "rdfs:comment": "Placeholder, needs real members.",
       "rdfs:label":[
         {
@@ -634,7 +634,7 @@
     {
       "@id": "odta:kindOfPOI",
       "@type": "rdf:Property",
-      "rdfs:comment": "Architect of a building.",
+      "rdfs:comment": "The specifics to a point of interest.",
       "rdfs:label": "kindOfPOI",
       "schema:domainIncludes": [
         "odta:CaveOrMine",
@@ -654,7 +654,7 @@
         "odta:NatureAttractionEnumeration",
         "odta:SaunaEnumeration",
         "odta:PublicSwimmingPoolEnumeration",
-        "schema:EventVenueEnumeration",
+        "odta:EventVenueEnumeration",
         "odta:SportsActivityLocationEnumeration",
         "odta:ZooEnumeration"
       ]
@@ -670,7 +670,7 @@
     {
       "@id": "odta:numberOfLevels",
       "@type": "rdf:Property",
-      "rdfs:comment": "Number of levels of a building.",
+      "rdfs:comment": "Number of levels of a cave or mine.",
       "rdfs:label": "numberOfLevels",
       "schema:domainIncludes": "odta:CaveOrMine",
       "schema:rangeIncludes": "schema:Integer"
@@ -678,7 +678,7 @@
     {
       "@id": "odta:numberOfStairs",
       "@type": "rdf:Property",
-      "rdfs:comment": "Number of stairs of a building.",
+      "rdfs:comment": "Number of stairs of a cave or minepathCondition.",
       "rdfs:label": "numberOfStairs",
       "schema:domainIncludes": "odta:CaveOrMine",
       "schema:rangeIncludes": "schema:Integer"
@@ -686,7 +686,7 @@
     {
       "@id": "odta:pathCondition",
       "@type": "rdf:Property",
-      "rdfs:comment": "Condition of path.",
+      "rdfs:comment": "Condition of the path(s) of a cave or mine.",
       "rdfs:label": "pathCondition",
       "schema:domainIncludes": "odta:CaveOrMine",
       "schema:rangeIncludes": "schema:Text"
@@ -1194,7 +1194,7 @@
     {
       "@id": "odta:theme",
       "@type": "rdf:Property",
-      "rdfs:comment": "A property for the segment or focused theme of a lodging business",
+      "rdfs:comment": "A property for the segment or focused theme of something.",
       "rdfs:label": "theme",
       "schema:domainIncludes": [
         "schema:LodgingBusiness",
@@ -1280,7 +1280,7 @@
     {
       "@id": "odta:kindOfLodgingBusiness",
       "@type": "rdf:Property",
-      "rdfs:comment": "The currency accepted.",
+      "rdfs:comment": "The type/kind of Lodging business.",
       "rdfs:label": "kindOfLodgingBusiness",
       "schema:domainIncludes": "schema:LodgingBusiness",
       "schema:rangeIncludes": "odta:LodgingBusinessEnumeration"
