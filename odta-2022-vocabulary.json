@@ -625,7 +625,10 @@
       "@type": "rdf:Property",
       "rdfs:comment": "Type of transportation.",
       "rdfs:label": "transportationMode",
-      "schema:domainIncludes": "schema:TouristAttraction",
+      "schema:domainIncludes": [
+        "schema:TouristAttraction",
+        "schema:TouristTrip"
+      ],
       "schema:rangeIncludes": "odta:TransportationModeEnumeration"
     },
     {
