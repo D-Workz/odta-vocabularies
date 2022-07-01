@@ -205,7 +205,7 @@
         "schema:Place",
         "odta:CaveOrMine",
         "odta:Sauna",
-        "odta:EventVenue",
+        "schema:EventVenue",
         "odta:Zoo"
       ],
       "schema:rangeIncludes": "schema:PropertyValue"
@@ -392,15 +392,15 @@
       ]
     },
     {
-      "@id": "odta:EventVenueEnumeration",
+      "@id": "schema:EventVenueEnumeration",
       "@type": "rdfs:Class",
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
       "rdfs:label": "EventVenueEnumeration",
       "rdfs:subClassOf": "schema:Enumeration"
     },
     {
-      "@id": "odta:EventVenueEnumerationPlaceholder",
-      "@type": "odta:EventVenueEnumeration",
+      "@id": "schema:EventVenueEnumerationPlaceholder",
+      "@type": "schema:EventVenueEnumeration",
       "rdfs:comment": "Placeholder, needs real members.",
       "rdfs:label":[
         {
@@ -574,13 +574,6 @@
       "rdfs:subClassOf": "schema:TouristAttraction"
     },
     {
-      "@id": "odta:EventVenue",
-      "@type": "rdfs:Class",
-      "rdfs:comment": "A tourist attraction natural attractions.",
-      "rdfs:label": "EventVenue",
-      "rdfs:subClassOf": "schema:Place"
-    },
-    {
       "@id": "odta:finnishSauna",
       "@type": "rdf:Property",
       "rdfs:comment": "The canonical list of values for finnishSauna (e.g., bio-sauna), steamBath(e.g., hamam, banja), and bathtubAndShowers (e.g., pool).",
@@ -635,7 +628,7 @@
         "odta:NatureAttraction",
         "odta:Sauna",
         "schema:PublicSwimmingPool",
-        "odta:EventVenue",
+        "schema:EventVenue",
         "schema:SportsActivityLocation"
       ],
       "schema:rangeIncludes": [
@@ -645,7 +638,7 @@
         "odta:NatureAttractionEnumeration",
         "odta:SaunaEnumeration",
         "odta:PublicSwimmingPoolEnumeration",
-        "odta:EventVenueEnumeration",
+        "schema:EventVenueEnumeration",
         "odta:SportsActivityLocationEnumeration"
       ]
     },
