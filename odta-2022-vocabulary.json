@@ -1307,6 +1307,20 @@
       ]
     },
     {
+      "@id": "odta:MuseumThemeEnumerationPlaceholder",
+      "@type": "odta:MuseumThemeEnumeration",
+      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Placeholder"
+        },{
+          "@language": "de",
+          "@value": "Platzhalter"
+        }
+      ]
+    },
+    {
       "@id": "odta:LodgingBusinessEnumeration",
       "@type": "rdfs:Class",
       "rdfs:comment": "An enumeration class that lists that measurements are either in the form of actual measurements or forecasts.",
