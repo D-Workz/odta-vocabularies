@@ -729,7 +729,7 @@
       "rdfs:comment": "A property to specify a measurement interval.",
       "rdfs:label": "measurementInterval",
       "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
-      "schema:rangeIncludes": "schema:DateTime"
+      "schema:rangeIncludes": "schema:QuantitativeValue"
     },
     {
       "@id": "odta:relatedPerson",
