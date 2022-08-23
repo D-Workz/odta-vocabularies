@@ -3,8 +3,8 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "schema": "http://schema.org/",
-    "odta": "https://example-vocab.ex/",
+    "schema": "https://schema.org/",
+    "odta": "https://odta.io/voc/",
     "rdfs:subClassOf": {
       "@id": "rdfs:subClassOf",
       "@type": "@id"
