@@ -1175,7 +1175,7 @@
     {
       "@id": "schema:image",
       "@type": "rdf:Property",
-      "rdfs:comment": "A credential awarded to the Person or Organization.",
+      "rdfs:comment": "An image of the item. This can be a URL or a fully described ImageObject.",
       "rdfs:label": "image",
       "schema:domainIncludes": "schema:LodgingBusiness",
       "schema:rangeIncludes": [
@@ -1186,7 +1186,7 @@
     {
       "@id": "schema:containsPlace",
       "@type": "rdf:Property",
-      "rdfs:comment": "A credential awarded to the Person or Organization.",
+      "rdfs:comment": "The basic containment relation between a place and another that it contains.",
       "rdfs:label": "containsPlace",
       "schema:domainIncludes": "schema:TouristAttraction",
       "schema:rangeIncludes": "schema:ParkingFacility"
