@@ -135,8 +135,19 @@
       "@type": "rdf:Property",
       "rdfs:comment": "The value of the quantitative value or property value node.",
       "rdfs:label": "value",
-      "schema:domainIncludes": "odta:OccupancyMeasurementSpecification",
-      "schema:rangeIncludes": "schema:Number"
+      "schema:domainIncludes": [
+        "odta:OccupancyMeasurementSpecification",
+        "schema:LocationFeatureSpecification"
+      ],
+      "schema:rangeIncludes": ["schema:Number", "schema:Boolean", "schema:Text"]
+    },
+    {
+      "@id": "schema:name",
+      "@type": "rdf:Property",
+      "rdfs:comment": "The name of the item.",
+      "rdfs:label": "value",
+      "schema:domainIncludes": "schema:LocationFeatureSpecification",
+      "schema:rangeIncludes":  "schema:Text"
     },
     {
       "@id": "schema:unitCode",
@@ -1173,6 +1184,23 @@
       "schema:rangeIncludes": "schema:EducationalOccupationalCredential"
     },
     {
+      "@id": "odta:sustainabilityFeature",
+      "@type": "rdf:Property",
+      "rdfs:comment": "Property to represent the knowledge about the sustainability features (e.g., whether they use local products, are close to public transportation) of various tourism related entities.",
+      "rdfs:label": "sustainabilityFeature",
+      "schema:domainIncludes": [
+        "schema:Event",
+        "schema:Offer",
+        "schema:Organization",
+        "schema:Place",
+        "schema:Trip"
+      ],
+      "schema:rangeIncludes": [
+        "odta:SustainabilityFeatureEnumeration",
+        "schema:LocationFeatureSpecification"
+      ]
+    },
+    {
       "@id": "schema:image",
       "@type": "rdf:Property",
       "rdfs:comment": "An image of the item. This can be a URL or a fully described ImageObject.",
@@ -1284,6 +1312,363 @@
       "rdfs:label": "kindOfLodgingBusiness",
       "schema:domainIncludes": "schema:LodgingBusiness",
       "schema:rangeIncludes": "odta:LodgingBusinessEnumeration"
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists sustainability Features",
+      "rdfs:label": "SustainabilityFeatureEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:SustainableTransportationEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists sustainability transportation features",
+      "rdfs:label": "SustainableTransportationEnumeration",
+      "rdfs:subClassOf": "odta:SustainabilityFeatureEnumeration"
+    },
+    {
+      "@id": "odta:SustainabilityCertificateEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists sustainability certificate features",
+      "rdfs:label": "SustainabilityCertificateEnumeration",
+      "rdfs:subClassOf": "odta:SustainabilityFeatureEnumeration"
+    },
+    {
+      "@id": "odta:SustainabilityCertificateEnumerationGreenStar",
+      "@type": "odta:SustainabilityCertificateEnumeration",
+      "rdfs:comment": "GreenStar",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Green Star"
+        },{
+          "@language": "de",
+          "@value": "Green Star"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityCertificateEnumerationECMSustainabilityGroup",
+      "@type": "odta:SustainabilityCertificateEnumeration",
+      "rdfs:comment": "ECMSustainabilityGroup",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "ECM Sustainability Group"
+        },{
+          "@language": "de",
+          "@value": "ECM Sustainability Group"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityCertificateEnumerationGlobalDestinationSustainabilityMovement",
+      "@type": "odta:SustainabilityCertificateEnumeration",
+      "rdfs:comment": "GlobalDestinationSustainabilityMovement",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Global Destination Sustainability Movement"
+        },{
+          "@language": "de",
+          "@value": "Global Destination Sustainability Movement"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityCertificateEnumerationGlobalSustainableTourismCouncil",
+      "@type": "odta:SustainabilityCertificateEnumeration",
+      "rdfs:comment": "GlobalSustainableTourismCouncil",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Global Sustainable Tourism Council"
+        },{
+          "@language": "de",
+          "@value": "Global Sustainable Tourism Council"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationCO2Reduction",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "CO2Reduction",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Reduction of CO2 emissions"
+        },{
+          "@language": "de",
+          "@value": "Reduzierung der CO2 Emission"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainableTransportationEnumerationNearTrainStation",
+      "@type": "odta:SustainableTransportationEnumeration",
+      "rdfs:comment": "NearTrainStation",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Near train station"
+        },{
+          "@language": "de",
+          "@value": "Nähe zu Bahnhof"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainableTransportationEnumerationNearBusStop",
+      "@type": "odta:SustainableTransportationEnumeration",
+      "rdfs:comment": "NearBusStop",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Near bus stop"
+        },{
+          "@language": "de",
+          "@value": "Nähe zu Bushaltestelle"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainableTransportationEnumerationNearParkAndRide",
+      "@type": "odta:SustainableTransportationEnumeration",
+      "rdfs:comment": "NearParkAndRide",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Near Park and Ride"
+        },{
+          "@language": "de",
+          "@value": "Nähe zu Park and Ride"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainableTransportationEnumerationNearEChargingStation",
+      "@type": "odta:SustainableTransportationEnumeration",
+      "rdfs:comment": "NearEChargingStation",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Near e-charging station"
+        },{
+          "@language": "de",
+          "@value": "Nähe zu E-Ladestation"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainableTransportationEnumerationNearBikeMaintenanceStation",
+      "@type": "odta:SustainableTransportationEnumeration",
+      "rdfs:comment": "NearBikeMaintenanceStation",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Near bicycle maintenance station"
+        },{
+          "@language": "de",
+          "@value": "Nähe zu Fahrradservicestation"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainableTransportationEnumerationRegionalPublicTransportationCards",
+      "@type": "odta:SustainableTransportationEnumeration",
+      "rdfs:comment": "RegionalPublicTransportationCards",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Regional public transportation tickets"
+        },{
+          "@language": "de",
+          "@value": "Regio-Cards für ÖPNV"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainableTransportationEnumerationBicycleRental",
+      "@type": "odta:SustainableTransportationEnumeration",
+      "rdfs:comment": "BicycleRental",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Bicycle rental"
+        },{
+          "@language": "de",
+          "@value": "Verleih von Fahrräder"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainableTransportationEnumerationElectricVehicleRental",
+      "@type": "odta:SustainableTransportationEnumeration",
+      "rdfs:comment": "ElectricVehicleRental",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Electrical vehicle rental"
+        },{
+          "@language": "de",
+          "@value": "Verleih von Elektrofahrzeugen"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationLocalProviderUsage",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "LocalProviderUsage",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Local production"
+        },{
+          "@language": "de",
+          "@value": "Lokale Herstellung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationSustainableGuestCard",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "SustainableGuestCard",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Guestcard"
+        },{
+          "@language": "de",
+          "@value": "Gästecard"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationEChargingStationBike",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "EChargingStationBike",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "E-Charging Station for Bikes"
+        },{
+          "@language": "de",
+          "@value": "E-Ladestationen Fahrrad"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationEChargingStationAuto",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "EChargingStationAuto",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "E-Charging Station for Cars"
+        },{
+          "@language": "de",
+          "@value": "E-Ladestationen Auto"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationSeasonalGuestGuidance",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "SeasonalGuestGuidance",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Seasonal guest guidance"
+        },{
+          "@language": "de",
+          "@value": "Besucherlenkungskonzepte"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationRecycling",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "Recycling",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Recycling concept"
+        },{
+          "@language": "de",
+          "@value": "Abfall-/Mülltrennungs-/Food wastekonzepte"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationInHouseProduction",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "InHouseProduction",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "In-house production"
+        },{
+          "@language": "de",
+          "@value": "Eigene Produktion"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationReusableProducts",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "ReusableProducts",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Reusable products"
+        },{
+          "@language": "de",
+          "@value": "Mehrwegprodukte"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationNaturalMaterials",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "NaturalMaterials",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Natural materials"
+        },{
+          "@language": "de",
+          "@value": "Verzicht auf Plastik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationNoGMOProducts",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "NoGMOProducts",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "No GMO products"
+        },{
+          "@language": "de",
+          "@value": "Gentechnisch nicht veränderte Produkte"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SustainabilityFeatureEnumerationSustainabilityEducation",
+      "@type": "odta:SustainabilityFeatureEnumeration",
+      "rdfs:comment": "SustainabilityEducation",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Sustainability education"
+        },{
+          "@language": "de",
+          "@value": "Informationsangebote zur Nachhaltigkeit"
+        }
+      ]
     },
     {
       "@id": "odta:EventThemeEnumeration",
