@@ -1531,7 +1531,7 @@
       ]
     },
     {
-      "@id": "odta:SustainableGuestCard",
+      "@id": "odta:SustainabilityFeatureEnumerationSustainableGuestCard",
       "@type": "odta:SustainabilityFeatureEnumeration",
       "rdfs:comment": "SustainableGuestCard",
       "rdfs:label":[
