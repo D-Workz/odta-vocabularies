@@ -1336,7 +1336,8 @@
     },
     {
       "@id": "odta:CookingClass",
-      "@type": "odta:EducationEventEnumeration",
+      "@type": ["odta:EducationEventEnumeration","odta:FoodEventEnumeration"
+      ],
       "rdfs:comment": "Education event type Cooking Class",
       "rdfs:label":[
         {
@@ -1649,20 +1650,7 @@
       "rdfs:label": "FoodEventEnumeration",
       "rdfs:subClassOf": "schema:Enumeration"
     },
-    {
-      "@id": "odta:CookingClass",
-      "@type": "odta:FoodEventEnumeration",
-      "rdfs:comment": "Food event type cooking class",
-      "rdfs:label":[
-        {
-          "@language": "en",
-          "@value": "Cooking class"
-        },{
-          "@language": "de",
-          "@value": "Kochkurs"
-        }
-      ]
-    },
+
     {
       "@id": "odta:FoodMarket",
       "@type": "odta:FoodEventEnumeration",
