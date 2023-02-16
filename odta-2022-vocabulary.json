@@ -1237,12 +1237,1360 @@
       ]
     },
     {
+      "@id": "odta:DanceEventEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "DanceEventEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:Ball",
+      "@type": "odta:DanceEventEnumeration",
+      "rdfs:comment": "Dance event type ball",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Ball"
+        },{
+          "@language": "de",
+          "@value": "Ball"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Party",
+      "@type": "odta:DanceEventEnumeration",
+      "rdfs:comment": "Dance event type party",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Party"
+        },{
+          "@language": "de",
+          "@value": "Party"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EducationEventEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "EducationEventEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:Excursion",
+      "@type": "odta:EducationEventEnumeration",
+      "rdfs:comment": "Education event type Excursion",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Excursion"
+        },{
+          "@language": "de",
+          "@value": "Exkursion"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Seminar",
+      "@type": "odta:EducationEventEnumeration",
+      "rdfs:comment": "Education event type Seminar",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Seminar"
+        },{
+          "@language": "de",
+          "@value": "Seminar"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Workshop",
+      "@type": "odta:EducationEventEnumeration",
+      "rdfs:comment": "Education event type Workshop",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Workshop"
+        },{
+          "@language": "de",
+          "@value": "Workshop"
+        }
+      ]
+    },
+    {
+      "@id": "odta:CraftingCourse",
+      "@type": "odta:EducationEventEnumeration",
+      "rdfs:comment": "Education event type Crafting Course",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "CraftingCourse"
+        },{
+          "@language": "de",
+          "@value": "Bastelkurs"
+        }
+      ]
+    },
+    {
+      "@id": "odta:CookingClass",
+      "@type": "odta:EducationEventEnumeration",
+      "rdfs:comment": "Education event type Cooking Class",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "CookingClass"
+        },{
+          "@language": "de",
+          "@value": "Kochkurs"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SportsCourse",
+      "@type": "odta:EducationEventEnumeration",
+      "rdfs:comment": "Education event type Sports Course",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "SportsCourse"
+        },{
+          "@language": "de",
+          "@value": "Sportkurs"
+        }
+      ]
+    },
+    {
+      "@id": "odta:ExhibitionEventEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "ExhibitionEventEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:ConsumerFair",
+      "@type": "odta:ExhibitionEventEnumeration",
+      "rdfs:comment": "Exhibition event type consumer fair",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Consumer fair"
+        },{
+          "@language": "de",
+          "@value": "Verbrauchermesse"
+        }
+      ]
+    },
+    {
+      "@id": "odta:ExhibitionOpening",
+      "@type": "odta:ExhibitionEventEnumeration",
+      "rdfs:comment": "Exhibition event type Vernissage",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Vernissage"
+        },{
+          "@language": "de",
+          "@value": "Vernissage"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Fair",
+      "@type": "odta:ExhibitionEventEnumeration",
+      "rdfs:comment": "Exhibition event type fair",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Fair"
+        },{
+          "@language": "de",
+          "@value": "Messe"
+        }
+      ]
+    },
+    {
+      "@id": "odta:PermanentExhibition",
+      "@type": "odta:ExhibitionEventEnumeration",
+      "rdfs:comment": "Exhibition event type permanent exhibition",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Permanent exhibition"
+        },{
+          "@language": "de",
+          "@value": "Dauerausstellung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TradeFair",
+      "@type": "odta:ExhibitionEventEnumeration",
+      "rdfs:comment": "Exhibition event type trade fair",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Trade fair"
+        },{
+          "@language": "de",
+          "@value": "Fachmesse"
+        }
+      ]
+    },
+    {
+      "@id": "odta:FestivalEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "FestivalEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:RiflemanFestival",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type Rifleman festival",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Rifleman festival"
+        },{
+          "@language": "de",
+          "@value": "Schützenfest"
+        }
+      ]
+    },
+    {
+      "@id": "odta:BeerFestival",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type beer festival",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Beer festival"
+        },{
+          "@language": "de",
+          "@value": "Bierfest"
+        }
+      ]
+    },
+    {
+      "@id": "odta:CarnivalParade",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type carnival parade",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Carnival parade"
+        },{
+          "@language": "de",
+          "@value": "Karnevalsumzug"
+        }
+      ]
+    },
+    {
+      "@id": "odta:CarnivalSession",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type carnival session",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Carnival session"
+        },{
+          "@language": "de",
+          "@value": "Karnevalssitzung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:CityFestival",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type city festival",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "City festival"
+        },{
+          "@language": "de",
+          "@value": "Stadtfest / Stadtteilfest / Altstadtfest"
+        }
+      ]
+    },
+    {
+      "@id": "odta:FestivalOfLights",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type festival of lights",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Festival of lights"
+        },{
+          "@language": "de",
+          "@value": "Lichterfest"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Fireworks",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type firework",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Firework"
+        },{
+          "@language": "de",
+          "@value": "Feuerwerk"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Funfair",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type funfair",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Funfair"
+        },{
+          "@language": "de",
+          "@value": "Kirmes / Kirchweih / Volksfest / Dom / Jahrmarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:HistoricalParade",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type historical parade",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Historical parade"
+        },{
+          "@language": "de",
+          "@value": "Historischer Umzug"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Illumination",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type Illumination",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Illumination"
+        },{
+          "@language": "de",
+          "@value": "Illumination"
+        }
+      ]
+    },
+    {
+      "@id": "odta:StreetFestival",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type street festival",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Street festival"
+        },{
+          "@language": "de",
+          "@value": "Straßenfest"
+        }
+      ]
+    },
+    {
+      "@id": "odta:VillageFestival",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type village festival",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Village festival"
+        },{
+          "@language": "de",
+          "@value": "Dorffest"
+        }
+      ]
+    },
+    {
+      "@id": "odta:HarvestFestival",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type Harvest festival",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Harvest festival"
+        },{
+          "@language": "de",
+          "@value": "Erntedankfest"
+        }
+      ]
+    },
+    {
+      "@id": "odta:WineFestival",
+      "@type": "odta:FestivalEnumeration",
+      "rdfs:comment": "Festival event type Wine festival",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Wine festival"
+        },{
+          "@language": "de",
+          "@value": "Weinfest"
+        }
+      ]
+    },
+    {
+      "@id": "odta:FoodEventEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "FoodEventEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:CookingClass",
+      "@type": "odta:FoodEventEnumeration",
+      "rdfs:comment": "Food event type cooking class",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Cooking class"
+        },{
+          "@language": "de",
+          "@value": "Kochkurs"
+        }
+      ]
+    },
+    {
+      "@id": "odta:FoodMarket",
+      "@type": "odta:FoodEventEnumeration",
+      "rdfs:comment": "Food event type food market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Food market"
+        },{
+          "@language": "de",
+          "@value": "Lebendsmittelmarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:LiteraryDinner",
+      "@type": "odta:FoodEventEnumeration",
+      "rdfs:comment": "Food event type Literary dinner",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Literary dinner"
+        },{
+          "@language": "de",
+          "@value": "Literarisches Dinner"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MusicalDinner",
+      "@type": "odta:FoodEventEnumeration",
+      "rdfs:comment": "Food event type musical dinner",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Musical dinner"
+        },{
+          "@language": "de",
+          "@value": "Musikalisches Abendessen"
+        }
+      ]
+    },
+    {
+      "@id": "odta:StreetFoodFestival",
+      "@type": "odta:FoodEventEnumeration",
+      "rdfs:comment": "Food event type Street food festival",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Street food festival"
+        },{
+          "@language": "de",
+          "@value": "Street Food Event/Festival"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Tasting",
+      "@type": "odta:FoodEventEnumeration",
+      "rdfs:comment": "Food event type tasting",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Tasting"
+        },{
+          "@language": "de",
+          "@value": "Verkostung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Brunch",
+      "@type": "odta:FoodEventEnumeration",
+      "rdfs:comment": "Food event type Brunch",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Brunch"
+        },{
+          "@language": "de",
+          "@value": "Brunch"
+        }
+      ]
+    },
+    {
+      "@id": "odta:ScreeningEventEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "ScreeningEventEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:CinemaEvent",
+      "@type": "odta:ScreeningEventEnumeration",
+      "rdfs:comment": "Screening event type Cinema event",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Cinema event"
+        },{
+          "@language": "de",
+          "@value": "Kino / Lichtspiel"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SportsEventEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "SportsEventEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:Athletics",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type athletics",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Athletics"
+        },{
+          "@language": "de",
+          "@value": "Leichtathletik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Basketball",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type basketball",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Basketball"
+        },{
+          "@language": "de",
+          "@value": "Basketball"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Bouldering",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type bouldering",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Bouldering"
+        },{
+          "@language": "de",
+          "@value": "Bouldern"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Canoe",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type canoe",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Canoe"
+        },{
+          "@language": "de",
+          "@value": "Kanu"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Cycling",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type cycling",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Cycling"
+        },{
+          "@language": "de",
+          "@value": "Radsport"
+        }
+      ]
+    },
+    {
+      "@id": "odta:CyclingTour",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type cycling tour",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Cycling tour"
+        },{
+          "@language": "de",
+          "@value": "Radtour"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Dancing",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type dancing",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Dancing"
+        },{
+          "@language": "de",
+          "@value": "Tanzen"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Fitness",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type fitness",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Fitness"
+        },{
+          "@language": "de",
+          "@value": "Fitness"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Football",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type football",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Football"
+        },{
+          "@language": "de",
+          "@value": "Fußball"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Golf",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type football",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Golf"
+        },{
+          "@language": "de",
+          "@value": "Golf"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Gymnastics",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Gymnastics",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Gymnastics"
+        },{
+          "@language": "de",
+          "@value": "Turnen"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Handball",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Handball",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Handball"
+        },{
+          "@language": "de",
+          "@value": "Handball"
+        }
+      ]
+    },
+    {
+      "@id": "odta:HorseRiding",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Horse riding",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Horse riding"
+        },{
+          "@language": "de",
+          "@value": "Reiten"
+        }
+      ]
+    },
+    {
+      "@id": "odta:IceHockey",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type ice hockey",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Ice hockey"
+        },{
+          "@language": "de",
+          "@value": "Eishockey"
+        }
+      ]
+    },
+    {
+      "@id": "odta:InLineSkating",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type In-Line skating",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "In-line skating"
+        },{
+          "@language": "de",
+          "@value": "Inline-Skating"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Kayak",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Kayak",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Kayak"
+        },{
+          "@language": "de",
+          "@value": "Kayak"
+        }
+      ]
+    },
+    {
+      "@id": "odta:KiteSurfing",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type KiteSurfing",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Kite surfing"
+        },{
+          "@language": "de",
+          "@value": "Kiten"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MartialArts",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type martial arts",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Martial arts"
+        },{
+          "@language": "de",
+          "@value": "Kampfsport"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Motorsport",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type motorsport",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Motorsport"
+        },{
+          "@language": "de",
+          "@value": "Motorsport"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Regatta",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type regatta",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Regatta"
+        },{
+          "@language": "de",
+          "@value": "Regatta"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Running",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type running",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Running"
+        },{
+          "@language": "de",
+          "@value": "Laufen"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Sailing",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type sailing",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Sailing"
+        },{
+          "@language": "de",
+          "@value": "Segeln"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SportCourse",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type sport course",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "SportCourse"
+        },{
+          "@language": "de",
+          "@value": "Sportkurs"
+        }
+      ]
+    },
+    {
+      "@id": "odta:StandUpPaddling",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Stand-up paddling",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Stand-up paddling"
+        },{
+          "@language": "de",
+          "@value": "Stand Up Paddling"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Swimming",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Swimming",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Swimming"
+        },{
+          "@language": "de",
+          "@value": "Schwimmen"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Tennis",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Tennis",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Tennis"
+        },{
+          "@language": "de",
+          "@value": "Tennis"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Volleyball",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Volleyball",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Volleyball"
+        },{
+          "@language": "de",
+          "@value": "Volleyball"
+        }
+      ]
+    },
+    {
+      "@id": "odta:WaterSports",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Water sports",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Water sports"
+        },{
+          "@language": "de",
+          "@value": "Wassersport"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Yoga",
+      "@type": "odta:SportsEventEnumeration",
+      "rdfs:comment": "Sports event type Yoga",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Yoga"
+        },{
+          "@language": "de",
+          "@value": "Yoga"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SaleEventEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "SaleEventEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:AdventMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Advent market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Advent market"
+        },{
+          "@language": "de",
+          "@value": "Adventsmarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:ArtsAndCraftsFair",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Arts and crafts fair",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Arts and crafts fair"
+        },{
+          "@language": "de",
+          "@value": "Kunsthandwerkermarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:AutumnMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Autumn market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Autumn market"
+        },{
+          "@language": "de",
+          "@value": "Herbstmarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:ChristmasMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Christmas market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Christmas market"
+        },{
+          "@language": "de",
+          "@value": "Weihnachtsmarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:EasterMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Easter market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Easter market"
+        },{
+          "@language": "de",
+          "@value": "Ostermarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:FarmersMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Farmers market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Farmers market"
+        },{
+          "@language": "de",
+          "@value": "Wochenmarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:FleaMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Flea market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Flea market"
+        },{
+          "@language": "de",
+          "@value": "Flohmarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:HistoricalMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Historical market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Historical market"
+        },{
+          "@language": "de",
+          "@value": "Historischer Markt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MedievalMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Medieval market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Medieval market"
+        },{
+          "@language": "de",
+          "@value": "Mittelaltermarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:WeddingFair",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Wedding fair",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Wedding fair"
+        },{
+          "@language": "de",
+          "@value": "Hochzeitsmesse"
+        }
+      ]
+    },
+    {
+      "@id": "odta:RegionalMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Regional market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Regional market"
+        },{
+          "@language": "de",
+          "@value": "Regionalmarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:ExhibitorsMarket",
+      "@type": "odta:SaleEventEnumeration",
+      "rdfs:comment": "Sales event type Exhibitors’ market",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Exhibitors’ market"
+        },{
+          "@language": "de",
+          "@value": "Ausstellermarkt"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TheaterEventEnumeration",
+      "@type": "rdfs:Class",
+      "rdfs:comment": "An enumeration class that lists different types of events.",
+      "rdfs:label": "TheaterEventEnumeration",
+      "rdfs:subClassOf": "schema:Enumeration"
+    },
+    {
+      "@id": "odta:Ballet",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Ballet",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Ballet"
+        },{
+          "@language": "de",
+          "@value": "Ballett"
+        }
+      ]
+    },
+    {
+      "@id": "odta:ChildrenTheater",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Children theater",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Children theater"
+        },{
+          "@language": "de",
+          "@value": "Kindertheater"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Comedy",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Comedy",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Comedy"
+        },{
+          "@language": "de",
+          "@value": "Komödie"
+        }
+      ]
+    },
+    {
+      "@id": "odta:DanceTheater",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Dance theater",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Dance theater"
+        },{
+          "@language": "de",
+          "@value": "Tanztheater"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Musical",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Musical",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Musical"
+        },{
+          "@language": "de",
+          "@value": "Musical"
+        }
+      ]
+    },
+    {
+      "@id": "odta:MusicalTheater",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Musical theater",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Musical theater"
+        },{
+          "@language": "de",
+          "@value": "Musiktheater"
+        }
+      ]
+    },
+    {
+      "@id": "odta:OpenAirTheater",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Open-air theater",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Open-air theater"
+        },{
+          "@language": "de",
+          "@value": "Freilichttheater"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Opera",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Opera",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Opera"
+        },{
+          "@language": "de",
+          "@value": "Oper"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Operetta",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Operetta",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Operetta"
+        },{
+          "@language": "de",
+          "@value": "Operette"
+        }
+      ]
+    },
+    {
+      "@id": "odta:TheaterFestival",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Theater festival",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Theater festival"
+        },{
+          "@language": "de",
+          "@value": "Theaterfestival"
+        }
+      ]
+    },
+    {
+      "@id": "odta:VarietyShow",
+      "@type": "odta:TheaterEventEnumeration",
+      "rdfs:comment": "Theater event type Variety show",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Variety show"
+        },{
+          "@language": "de",
+          "@value": "Varieté"
+        }
+      ]
+    },
+    {
       "@id": "odta:kindOfEvent",
       "@type": "rdf:Property",
       "rdfs:comment": "A property to distinguish different 'types' of events.",
       "rdfs:label": "kindOfEvent",
       "schema:domainIncludes": "schema:Event",
-      "schema:rangeIncludes": "odta:EventEnumeration"
+      "schema:rangeIncludes": [
+        "odta:EventEnumeration",
+        "odta:SaleEventEnumeration",
+        "odta:DanceEventEnumeration",
+        "odta:EducationEventEnumeration",
+        "odta:ExhibitionEventEnumeration",
+        "odta:FestivalEnumeration",
+        "odta:FoodEventEnumeration",
+        "odta:ScreeningEventEnumeration",
+        "odta:SportsEventEnumeration",
+        "odta:TheaterEventEnumeration"
+      ]
+    },
+    {
+      "@id": "odta:Conference",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Event type Conference",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Conference"
+        },{
+          "@language": "de",
+          "@value": "Konference"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Congress",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Event type Congress",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Congress"
+        },{
+          "@language": "de",
+          "@value": "Kongress"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Convention",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Event type Convention",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Convention"
+        },{
+          "@language": "de",
+          "@value": "Convention"
+        }
+      ]
+    },
+    {
+      "@id": "odta:OpenAir",
+      "@type": "odta:EventEnumeration",
+      "rdfs:comment": "Event type OpenAir",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "OpenAir"
+        },{
+          "@language": "de",
+          "@value": "OpenAir"
+        }
+      ]
     },
     {
       "@id": "schema:copyrightHolder",
@@ -1312,6 +2660,14 @@
       "rdfs:label": "kindOfLodgingBusiness",
       "schema:domainIncludes": "schema:LodgingBusiness",
       "schema:rangeIncludes": "odta:LodgingBusinessEnumeration"
+    },
+    {
+      "@id": "odta:donationLink",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A link to make donations",
+      "rdfs:label": "donationLink",
+      "schema:domainIncludes": "schema:Event",
+      "schema:rangeIncludes": "schema:URL"
     },
     {
       "@id": "odta:SustainabilityFeatureEnumeration",
@@ -1678,16 +3034,954 @@
       "rdfs:subClassOf": "schema:Enumeration"
     },
     {
-      "@id": "odta:EventThemeEnumerationPlaceholder",
+      "@id": "odta:60sMusic",
       "@type": "odta:EventThemeEnumeration",
-      "rdfs:comment": "Placeholder, needs real members.",
+      "rdfs:comment": "An Event theme of type, 60’s music",
       "rdfs:label":[
         {
           "@language": "en",
-          "@value": "Placeholder"
+          "@value": "60’s music"
         },{
           "@language": "de",
-          "@value": "Platzhalter"
+          "@value": "60s-Musik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:70sMusic",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, 70’s music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "70’s music"
+        },{
+          "@language": "de",
+          "@value": "70s-Musik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:80sMusic",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, 80’s music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "80’s music"
+        },{
+          "@language": "de",
+          "@value": "80s-Musik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:90sMusic",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, 90’s music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "90’s music"
+        },{
+          "@language": "de",
+          "@value": "90s-Musik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Acapella",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Acapella",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Acapella"
+        },{
+          "@language": "de",
+          "@value": "Acapella"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Alternative",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Alternative",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Alternative"
+        },{
+          "@language": "de",
+          "@value": "Alternative"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Blues",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Blues",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Blues"
+        },{
+          "@language": "de",
+          "@value": "Blues"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Chanson",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Chanson",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Chanson"
+        },{
+          "@language": "de",
+          "@value": "Chanson"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Chillout",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Chillout",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Chillout"
+        },{
+          "@language": "de",
+          "@value": "Chillout"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Christmas",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Christmas",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Christmas"
+        },{
+          "@language": "de",
+          "@value": "Weihnachten"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Competition",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Competition",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Competition"
+        },{
+          "@language": "de",
+          "@value": "Wettbewerb"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Country",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Country",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Country"
+        },{
+          "@language": "de",
+          "@value": "Country"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Culture",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Culture",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Culture"
+        },{
+          "@language": "de",
+          "@value": "Kultur"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Dancehall",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Dancehall",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Dancehall"
+        },{
+          "@language": "de",
+          "@value": "Dancehall"
+        }
+      ]
+    },
+    {
+      "@id": "odta:ActiveParticipation",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Active Participation",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Active Participation"
+        },{
+          "@language": "de",
+          "@value": "Mitmach-Event"
+        }
+      ]
+    },
+    {
+      "@id": "odta:DrumAndBassMusic",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Drum and bass music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Drum and bass music"
+        },{
+          "@language": "de",
+          "@value": "Drum and Bass"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Easter",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Easter",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Easter"
+        },{
+          "@language": "de",
+          "@value": "Ostern"
+        }
+      ]
+    },
+    {
+      "@id": "odta:ElectroMusic",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Electro",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Electro"
+        },{
+          "@language": "de",
+          "@value": "Electro-Musik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Family",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Family",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Family"
+        },{
+          "@language": "de",
+          "@value": "Familie"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Folk",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Folk",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Folk"
+        },{
+          "@language": "de",
+          "@value": "Folk"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Folklore",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Folklore",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Folklore"
+        },{
+          "@language": "de",
+          "@value": "Volkskunde"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Geography",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Geography",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Geography"
+        },{
+          "@language": "de",
+          "@value": "Geographie"
+        }
+      ]
+    },
+    {
+      "@id": "odta:GoaMusic",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Goa",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Goa"
+        },{
+          "@language": "de",
+          "@value": "Goa-Musik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Gospel",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Gospel",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Gospel"
+        },{
+          "@language": "de",
+          "@value": "Gospel"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Halloween",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Halloween",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Halloween"
+        },{
+          "@language": "de",
+          "@value": "Helloween"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Hardcore",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Hardcore",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Hardcore"
+        },{
+          "@language": "de",
+          "@value": "Hardcore"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Hardstyle",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Hardstyle",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Hardstyle"
+        },{
+          "@language": "de",
+          "@value": "Hardstyle"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Health",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Health",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Health"
+        },{
+          "@language": "de",
+          "@value": "Gesundheit"
+        }
+      ]
+    },
+    {
+      "@id": "odta:HipHop",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Hip Hop",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Hip Hop"
+        },{
+          "@language": "de",
+          "@value": "Hip Hop"
+        }
+      ]
+    },
+    {
+      "@id": "odta:History",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, History",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "History"
+        },{
+          "@language": "de",
+          "@value": "Historie"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Indie",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Indie",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Indie"
+        },{
+          "@language": "de",
+          "@value": "Indie"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Jazz",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Jazz",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Jazz"
+        },{
+          "@language": "de",
+          "@value": "Jazz"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Klassik",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Klassik",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Klassik"
+        },{
+          "@language": "de",
+          "@value": "Klassik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Literature",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Literature",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Literature"
+        },{
+          "@language": "de",
+          "@value": "Literatur"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Lounge",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Lounge",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Lounge"
+        },{
+          "@language": "de",
+          "@value": "Lounge"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Maritime",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Maritime",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Maritime"
+        },{
+          "@language": "de",
+          "@value": "Maritim"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Media",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Media",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Media"
+        },{
+          "@language": "de",
+          "@value": "Medien"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Metal",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Metal",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Metal"
+        },{
+          "@language": "de",
+          "@value": "Metal"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Music",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Music"
+        },{
+          "@language": "de",
+          "@value": "Musik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:NewYearsEve",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, New year’s eve",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "New year’s eve"
+        },{
+          "@language": "de",
+          "@value": "Silvester"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Nutrition",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Nutrition",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Nutrition"
+        },{
+          "@language": "de",
+          "@value": "Ernährung"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Oktoberfest",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Oktoberfest",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Oktoberfest"
+        },{
+          "@language": "de",
+          "@value": "Oktoberfest"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Percussion",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Percussion",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Percussion"
+        },{
+          "@language": "de",
+          "@value": "Percussion"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Politics",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Politics",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Politics"
+        },{
+          "@language": "de",
+          "@value": "Politik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Pop",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Pop",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Pop"
+        },{
+          "@language": "de",
+          "@value": "Pop-Musik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Psytrance",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Psytrance",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Psytrance"
+        },{
+          "@language": "de",
+          "@value": "Psytrance"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Punkrock",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Punkrock",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Punkrock"
+        },{
+          "@language": "de",
+          "@value": "Punkrock"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Reggae",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Reggae",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Reggae"
+        },{
+          "@language": "de",
+          "@value": "Reggae"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Religious",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Religious",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Religious"
+        },{
+          "@language": "de",
+          "@value": "Sakralmusik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:RnB",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, RnB",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "RnB"
+        },{
+          "@language": "de",
+          "@value": "RnB"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Rock",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Rock",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Rock"
+        },{
+          "@language": "de",
+          "@value": "Rock"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Schlager",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Schlager Music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Schlager Music"
+        },{
+          "@language": "de",
+          "@value": "Schlager"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Science",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Science",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Science"
+        },{
+          "@language": "de",
+          "@value": "Wissenschaft"
+        }
+      ]
+    },
+    {
+      "@id": "odta:SingerSongwriter",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Singer-songwriter",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Singer-songwriter"
+        },{
+          "@language": "de",
+          "@value": "Singer/Songwriter"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Ska",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Ska",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Ska"
+        },{
+          "@language": "de",
+          "@value": "Ska"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Social",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Social",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Social"
+        },{
+          "@language": "de",
+          "@value": "Soziales"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Society",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Society",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Society"
+        },{
+          "@language": "de",
+          "@value": "Gesellschaft"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Spiritual",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Spiritual music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Spiritual music"
+        },{
+          "@language": "de",
+          "@value": "Spiritual"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Sports",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Sports",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Sports"
+        },{
+          "@language": "de",
+          "@value": "Sport"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Swing",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Swing",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Swing"
+        },{
+          "@language": "de",
+          "@value": "Swing"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Technology",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Technology",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Technology"
+        },{
+          "@language": "de",
+          "@value": "Technologie"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Techno",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Techno",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Techno"
+        },{
+          "@language": "de",
+          "@value": "Techno"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Traditional",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Traditional",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Traditional"
+        },{
+          "@language": "de",
+          "@value": "Tradition & Brauchtum"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Travel",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Travel",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Travel"
+        },{
+          "@language": "de",
+          "@value": "Reisen"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Urban",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Urban music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Urban music"
+        },{
+          "@language": "de",
+          "@value": "Urban-Musik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Folkmusic",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Folk Music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Folk Music"
+        },{
+          "@language": "de",
+          "@value": "Volksmusik"
+        }
+      ]
+    },
+    {
+      "@id": "odta:Wellness",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, Wellness",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "Wellness"
+        },{
+          "@language": "de",
+          "@value": "Wellness"
+        }
+      ]
+    },
+    {
+      "@id": "odta:WorldMusic",
+      "@type": "odta:EventThemeEnumeration",
+      "rdfs:comment": "An Event theme of type, World music",
+      "rdfs:label":[
+        {
+          "@language": "en",
+          "@value": "World music"
+        },{
+          "@language": "de",
+          "@value": "Weltmusik"
         }
       ]
     },
